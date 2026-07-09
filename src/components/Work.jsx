@@ -4,15 +4,15 @@ import { Globe, Code, Palette, ArrowRight, X } from "lucide-react";
 // Reusable WorkCard Component
 function WorkCard({ id, image, icon: Icon, title, description, onReadMore }) {
   return (
-    <div 
+    <div
       className="group bg-white rounded-lg border-2 border-black overflow-hidden flex flex-col h-full shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:-translate-x-1 hover:-translate-y-1 transition-all duration-200"
       id={`work-card-${id}`}
     >
       {/* Card Image */}
       <div className="relative aspect-[16/10] overflow-hidden bg-slate-100 border-b-2 border-black">
-        <img 
-          src={image} 
-          alt={title} 
+        <img
+          src={image}
+          alt={title}
           referrerPolicy="no-referrer"
           className="w-full h-full object-cover grayscale contrast-115 group-hover:grayscale-0 transition-all duration-300"
           id={`work-card-image-${id}`}
@@ -78,7 +78,7 @@ export default function Work() {
   return (
     <section id="services" className="py-24 bg-slate-50 border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-6 sm:px-8">
-        
+
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto mb-20" id="work-header">
           <span className="text-xs font-black uppercase tracking-widest text-slate-400">My Expertise</span>
@@ -93,7 +93,7 @@ export default function Work() {
         {/* Responsive Grid of Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8" id="work-grid">
           {works.map((work) => (
-            <WorkCard 
+            <WorkCard
               key={work.id}
               id={work.id}
               image={work.image}
@@ -112,12 +112,12 @@ export default function Work() {
 
       {/* Modern Detail Modal */}
       {selectedWork && (
-        <div 
+        <div
           className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm"
           id="work-modal"
           onClick={() => setSelectedWork(null)}
         >
-          <div 
+          <div
             className="bg-white rounded-lg max-w-lg w-full overflow-hidden border-2 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] relative"
             id="work-modal-content"
             onClick={(e) => e.stopPropagation()}
@@ -129,9 +129,9 @@ export default function Work() {
             >
               <X className="h-4 w-4" />
             </button>
-            <img 
-              src={selectedWork.image} 
-              alt={selectedWork.title} 
+            <img
+              src={selectedWork.image}
+              alt={selectedWork.title}
               referrerPolicy="no-referrer"
               className="w-full h-48 object-cover border-b-2 border-black grayscale contrast-110"
             />

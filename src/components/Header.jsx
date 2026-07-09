@@ -23,7 +23,7 @@ export default function Header() {
           <div className="flex items-center space-x-2">
             <Laptop className="h-5 w-5 text-black" id="header-logo-icon" />
             <span className="text-xl font-black text-black tracking-tighter uppercase" id="header-logo-text">
-              My Portfolio
+              raiyan matadar
             </span>
           </div>
 
