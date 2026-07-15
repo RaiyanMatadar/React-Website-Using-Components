@@ -21,13 +21,10 @@ export default function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
     
-    // Log the values to the console as requested
     console.log("Contact Form Submission Data:", formData);
     
-    // Display standard alert or beautiful custom success notification
     setIsSubmitted(true);
     
-    // Reset form fields after action
     setFormData({
       fullName: "",
       email: "",
@@ -35,7 +32,6 @@ export default function Contact() {
       message: ""
     });
 
-    // Auto-clear success message after 5 seconds
     setTimeout(() => {
       setIsSubmitted(false);
     }, 5000);
@@ -101,7 +97,7 @@ export default function Contact() {
                 </div>
               </div>
 
-              {/* Physical Address */}
+              {/* Address */}
               <div className="flex items-start space-x-4">
                 <div className="bg-black text-white p-3 rounded border border-black shadow">
                   <MapPin className="h-5 w-5" />
@@ -115,7 +111,7 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* Decorative Card footer */}
+            {/* Card footer */}
             <div className="pt-6 border-t border-slate-200">
               <p className="text-xs text-slate-500 font-bold uppercase tracking-wide">
                 Looking forward to our conversation!
@@ -123,7 +119,7 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Column 2: Interactive Form */}
+          {/*Form */}
           <div className="lg:col-span-7" id="contact-form-panel">
             {isSubmitted && (
               <div className="mb-6 p-4 bg-teal-50 border-2 border-teal-800 text-teal-900 rounded-lg flex items-center space-x-3 shadow-[3px_3px_0px_0px_rgba(20,110,90,1)]" id="contact-success-banner">
@@ -136,7 +132,7 @@ export default function Contact() {
             )}
 
             <form onSubmit={handleSubmit} className="space-y-6" id="contact-form">
-              {/* Full Name & Email (2 columns on tablet/desktop) */}
+              {/* Full Name & Email */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="fullName" className="block text-xs font-black uppercase tracking-widest text-black mb-1.5">

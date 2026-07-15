@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Globe, Code, Palette, ArrowRight, X } from "lucide-react";
 
-// Reusable WorkCard Component
 function WorkCard({ id, image, icon: Icon, title, description, onReadMore }) {
   return (
     <div
@@ -48,6 +47,7 @@ function WorkCard({ id, image, icon: Icon, title, description, onReadMore }) {
 export default function Work() {
   const [selectedWork, setSelectedWork] = useState(null);
 
+  // temporarily dummy data 
   const works = [
     {
       id: "web-dev",

@@ -1,7 +1,7 @@
 import { Facebook, Instagram, Linkedin, Github, Laptop } from "lucide-react";
 
 export default function Footer() {
-  const currentYear = 2026; // Fixed as requested: "© 2026 My Portfolio"
+  const currentYear = 2026; 
 
   const quickLinks = [
     { name: "Home", href: "#home" },
@@ -22,7 +22,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 sm:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 pb-12 border-b border-slate-900 items-start">
           
-          {/* Column 1: Brand details */}
+          {/* Brand details */}
           <div className="space-y-4" id="footer-brand-section">
             <div className="flex items-center space-x-2">
               <Laptop className="h-5 w-5 text-white" />
@@ -35,7 +35,7 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Column 2: Quick Links */}
+          {/* Quick Links */}
           <div className="space-y-4" id="footer-links-section">
             <h4 className="text-[10px] font-black text-white uppercase tracking-widest">Quick Links</h4>
             <ul className="space-y-2">
@@ -52,7 +52,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 3: Social Media Links */}
+          {/*Social Media Links */}
           <div className="space-y-4" id="footer-social-section">
             <h4 className="text-[10px] font-black text-white uppercase tracking-widest">Social Channels</h4>
             <div className="flex space-x-3">
